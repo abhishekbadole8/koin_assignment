@@ -1,0 +1,46 @@
+.nav {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 19.36px;
+    font-family: 'Inter';
+}
+
+.navItems {
+    text-decoration: none;
+    color: rgba(15, 22, 41, 1);
+}
+
+.startButton button {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    background: linear-gradient(90deg, rgba(40, 112, 234, 1) 0%, rgba(27, 74, 239, 1) 100%);
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    margin-left: 1.5rem;
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .hamburgerMenu {
+        display: block;
+    }
+
+    .hamburgerMenu svg{
+        width: 27px;
+        height: 27px;
+    }
+
+    .navItems,
+    .startButton {
+        display: none;
+    }
+}
