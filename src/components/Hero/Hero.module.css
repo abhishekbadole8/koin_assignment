@@ -1,0 +1,94 @@
+.heroSection {
+    width: 960px;
+    height: 700px;
+}
+
+/* --------- hero header ----------- */
+.heroHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.currencyIcon {
+    width: 36px;
+    height: 36px;
+}
+
+.currencyIcon img {
+    width: 100%;
+}
+
+.currencyTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #0b1426;
+    margin: 0 10px;
+}
+
+.currencySymbol {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 19px;
+    color: #5D667B;
+}
+
+.rankTag {
+    border-radius: 8px;
+    background-color: #808A9D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 20px;
+    padding: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+/* -------------header ------------- */
+
+/* ----------------- hero body --------------- */
+
+.heroCurrencyPrice {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.currencyPriceValue {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    color: #0B1426;
+}
+
+.currencyPriceChange {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.currencyPriceChangePeriod {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 27px;
+    color: #768396;
+    margin-left: 6px;
+}
+
+.currencyPriceInINR {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 27px;
+    color: #0B1426;
+}
+
+/* body  */
+
+/* chart container start */
+.heroChartContainer {
+    margin-top: 20px;
+    border-top: 1px solid #DEE1E6;
+}

@@ -1,0 +1,145 @@
+.routeTracker {
+    display: flex;
+    font-family: 'Inter';
+    font-weight: 400;
+    line-height: 16px;
+    font-size: 14px;
+    color: rgba(62, 87, 101, 1);
+    padding: 1rem 2.75rem;
+    background-color: rgba(239, 242, 245, 1);
+}
+
+.routeTracker span {
+    margin-right: 8px;
+}
+
+.routeTracker span:last-child {
+    margin-right: 0;
+    font-weight: 500;
+    color: rgba(15, 22, 41, 1);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 0 2.75rem;
+    background-color: rgba(239, 242, 245, 1);
+    font-family: 'Inter';
+}
+
+
+section {
+    background-color: #fff;
+    padding: 22px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* right container */
+.rightContainer {}
+
+.getStartedContainer {
+    padding: 2.25rem 3rem;
+    border-radius: 16px;
+    text-align: center;
+    background-color: #0052FE;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.getStartedInfo {}
+
+.getStartedTitle {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 40px;
+    margin: 0 2rem .25rem;
+}
+
+.getStartedDescription {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #F2F2F2;
+}
+
+.placeholder {
+    margin: 25px 0;
+}
+
+.getStartedButton {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 28px;
+    color: #0F1629;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+}
+
+.getStartedButton span {
+    display: flex;
+    align-items: center;
+}
+
+/* ------ get started end */
+
+/*  treding start here */
+.trendingCoinsContainer {}
+
+.trendingCoinsTitle {
+    color: #0F1629;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.coinList {
+    list-style: none;
+}
+
+.coinItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+}
+
+.coinItem:last-child {
+    margin-bottom: 0;
+}
+
+.coinDetails {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coinIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.coinIconImage {
+    width: 100%;
+}
+
+.coinName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+}
