@@ -4,6 +4,8 @@ import styles from "./dashboard.module.css";
 import Hero from "../components/Hero/Hero";
 import PercentageChange from "../components/PercentageChange/PercentageChange";
 import bitcoin from "../assets/bitcoin.png";
+import Performance from "../components/Performance/Performance";
+import Trending from "../components/Trending/Trending";
 
 function dashboard() {
     return (
@@ -21,6 +23,24 @@ function dashboard() {
                 <div className={styles.leftContainer}>
 
                     <Hero />
+
+                    <div className={styles.horizontalMenuContainer}>
+
+                        <ul className={styles.horizontalMenuList}>
+
+                            <li className={styles.horizontalMenuItemsActive}>Overview</li>
+                            <li className={styles.horizontalMenuItems}>Fundamentals</li>
+                            <li className={styles.horizontalMenuItems}>News Insights</li>
+                            <li className={styles.horizontalMenuItems}>Technicals</li>
+                            <li className={styles.horizontalMenuItems}>Sentiments</li>
+                            <li className={styles.horizontalMenuItems}>Team</li>
+                            <li className={styles.horizontalMenuItems}>Tokenomic</li>
+
+                        </ul>
+
+                    </div>
+
+                    <Performance />
 
                 </div>
 
@@ -196,63 +216,9 @@ function dashboard() {
 
                     </div>
 
-                    <section className={styles.trendingCoinsContainer}>
-
-                        <h3 className={styles.trendingCoinsTitle}>Trending Coins (24h)</h3>
-
-                        <ul className={styles.coinList}>
-
-                            <li className={styles.coinItem}>
-
-                                <div className={styles.coinDetails}>
-
-                                    <div className={styles.coinIcon}>
-                                        <img src={bitcoin} alt="Bitcoin Icon" className={styles.coinIconImage} />
-                                    </div>
-
-                                    <h5 className={styles.coinName}>Ethereum(ETH)</h5>
-                                </div>
-
-                                <PercentageChange />
-
-                            </li>
-
-                            <li className={styles.coinItem}>
-
-                                <div className={styles.coinDetails}>
-
-                                    <div className={styles.coinIcon}>
-                                        <img src={bitcoin} alt="Bitcoin Icon" className={styles.coinIconImage} />
-                                    </div>
-
-                                    <h5 className={styles.coinName}>Ethereum(ETH)</h5>
-                                </div>
-
-                                <PercentageChange />
-
-                            </li>
-
-                            <li className={styles.coinItem}>
-
-                                <div className={styles.coinDetails}>
-
-                                    <div className={styles.coinIcon}>
-                                        <img src={bitcoin} alt="Bitcoin Icon" className={styles.coinIconImage} />
-                                    </div>
-
-                                    <h5 className={styles.coinName}>Polygon (MATIC)</h5>
-                                </div>
-
-                                <PercentageChange />
-
-                            </li>
-
-                        </ul>
-
-                    </section>
+                    <Trending />
 
                 </div>
-
 
             </main>
 

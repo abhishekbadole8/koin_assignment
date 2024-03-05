@@ -1,0 +1,72 @@
+/* todays statics */
+.progressBarContainer {
+    margin: 10px 0;
+}
+
+.stasticContainer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    /* height: 68px; */
+    margin-top: 15px;
+}
+
+.column1,
+.column3 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.column1,
+.column2,
+.column3 {
+    padding: 6px;
+}
+
+.container {
+    padding: 1rem;
+    height: 100%;
+}
+
+.performanceProgressTitle {
+    color: #44475B;
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: 20px;
+}
+
+.performanceProgressValue {
+    color: #44475B;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* ----- fundamental list */
+
+.fundamentalList {
+    list-style: none;
+    margin-top: 16px;
+}
+
+.fundamentalItem {
+    height: 50px;
+    border-bottom: 1px solid #D3E0E6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.fundamentalItemName {
+    color: #768396;
+    font-size: 14px;
+}
+
+.fundamentalItemValue {
+    color: #111827;
+    font-size: 13px;
+}

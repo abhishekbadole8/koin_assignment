@@ -36,6 +36,21 @@ section {
     margin-bottom: 20px;
 }
 
+.sectionTitle {
+    color: #0F1629;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.sectionSubTitle {
+    color: #44475B;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 12px 0;
+}
 
 /* right container */
 .rightContainer {}
@@ -91,55 +106,43 @@ section {
 
 /* ------ get started end */
 
-/*  treding start here */
-.trendingCoinsContainer {}
+/*  horizontal menu */
 
-.trendingCoinsTitle {
-    color: #0F1629;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 28px;
-}
-
-.coinList {
-    list-style: none;
-}
-
-.coinItem {
-    display: flex;
-    justify-content: space-between;
-    margin: 14px 0;
-}
-
-.coinItem:last-child {
-    margin-bottom: 0;
-}
-
-.coinDetails {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.coinIcon {
-    width: 24px;
-    height: 24px;
-}
-
-.coinIconImage {
-    width: 100%;
-}
-
-.coinName {
+.horizontalMenuContainer {
+    font-size: 1rem;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
 }
 
+.horizontalMenuList {
+    list-style: none;
+    display: flex;
+    gap: 34px;
+    border-bottom: 1px solid #D3E0E6;
+}
+
+.horizontalMenuItems,
+.horizontalMenuItemsActive {
+    padding: 14px 0;
+}
+
+.horizontalMenuItemsActive,
+.horizontalMenuItems:hover {
+    font-weight: 600;
+    color: #0052FE;
+    border-bottom: 3px solid #0052FE;
+    cursor: pointer;
+}
+
+/* --------------- */
+
+/* ----------- */
 
 /* Media query for mobile */
 @media (max-width: 768px) {
-    main{
+    main {
         flex-direction: column;
     }
 }

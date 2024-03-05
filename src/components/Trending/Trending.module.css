@@ -1,0 +1,34 @@
+.coinList {
+    list-style: none;
+}
+
+.coinItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 0;
+}
+
+.coinItem:last-child {
+    margin-bottom: 0;
+}
+
+.coinDetails {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coinIcon {
+    width: 24px;
+    height: 24px;
+}
+
+.coinIconImage {
+    width: 100%;
+}
+
+.coinName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
