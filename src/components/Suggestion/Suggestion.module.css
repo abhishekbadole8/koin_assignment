@@ -1,0 +1,209 @@
+.suggestionContainer {
+    padding: 35px 40px;
+    font-family: 'Inter';
+}
+
+.suggestionTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: #202020;
+    margin-bottom: 14px;
+}
+
+.suggestionList {
+    position: relative;
+    display: flex;
+    margin-bottom: 14px;
+}
+
+.suggestionItems {
+    overflow-x: auto;
+}
+
+.suggestionItems,
+.suggestionItemContent {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    list-style: none;
+}
+
+.suggestionItem {
+    min-width: 252px;
+    height: 160px;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #E3E3E3;
+    /* margin-right: 10px; */
+}
+
+.suggestionItemImage {
+    width: 26px;
+    height: 26px;
+}
+
+.suggestionItemImage img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.suggestionItemName {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+}
+
+.suggestionItemPrice {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    margin-top: 6px;
+    color: #171717;
+}
+
+.suggestionButtons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: #171717;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+}
+
+.suggestionPreviousButton {
+    margin-left: -1rem;
+    rotate: 180deg;
+}
+
+.suggestionNextButton {
+    margin-right: -1rem;
+}
+
+.suggestionPreviousButton,
+.suggestionNextButton {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestionNextButton img,
+.suggestionPreviousButton img {
+    width: 100%;
+}
+
+/* ---------percentage chnage */
+.currencyPriceChangePercentage {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.currencyPriceChangePercentage {
+    color: #14B079;
+    background-color: #EBF9F4;
+    padding: 7px 10px;
+    border-radius: 4px;
+}
+
+.currencyPriceChangePercentage svg {
+    width: 11px;
+    height: 8px;
+}
+
+.currencyPriceChangePercentage p {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+}
+
+/* --------------- */
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .suggestionContainer {
+        padding: 1rem 0;
+    }
+
+    .suggestionTitle {
+        margin-bottom: 4px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .suggestionItem {
+        min-width: 159px;
+        height: 102px;
+        padding: 10px;
+        border-radius: 6.3px;
+        border: .63px solid #E3E3E3;
+    }
+
+    .suggestionItems {
+        gap: 8px;
+    }
+
+    .suggestionItemImage {
+        width: 16px;
+        height: 16px;
+    }
+
+    .suggestionItemName {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .suggestionItemPrice {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .suggestionItemContent {
+        gap: 4.5px;
+    }
+
+    .suggestionItemPrice {
+        margin-top: 5px;
+    }
+
+    .suggestionPreviousButton {
+        margin-left: -.65rem;
+    }
+    
+    .suggestionNextButton {
+        margin-right: -.65rem;
+    }
+    
+    /* percent */
+    .currencyPriceChangePercentage {
+        font-size: 10px;
+        gap: 2px;
+    }
+
+    .currencyPriceChangePercentage {
+        padding: 2px;
+    }
+
+    .currencyPriceChangePercentage p {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 9px;
+        letter-spacing: 0em;
+    }
+}

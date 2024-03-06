@@ -216,4 +216,7 @@ section h4 span {
         height: 149px;
     }
 
+    .suggestionResContainer {
+        display: none;
+    }
 }

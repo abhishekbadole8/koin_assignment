@@ -9,6 +9,9 @@ import Trending from "../components/Trending/Trending";
 import Sentiment from "../components/Sentiment/Sentiment";
 import HeroHeader from "../components/HeroHeader.jsx/HeroHeader";
 import About from "../components/About/About";
+import Tokenomics from "../components/Tokenomics/Tokenomics";
+import Team from "../components/Team/Team";
+import Suggestion from "../components/Suggestion/Suggestion";
 
 function dashboard() {
     return (
@@ -52,6 +55,10 @@ function dashboard() {
                     <Sentiment />
 
                     <About />
+
+                    <Tokenomics />
+
+                    <Team />
 
                 </div>
 
@@ -233,7 +240,9 @@ function dashboard() {
 
             </main>
 
-
+            <div className={styles.suggestionResContainer}>
+                <Suggestion />
+            </div>
 
         </div >
     )
