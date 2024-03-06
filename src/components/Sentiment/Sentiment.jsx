@@ -2,6 +2,7 @@ import React from 'react'
 import styles from "./Sentiment.module.css";
 import news from "../../assets/news.svg";
 import rightArrow from "../../assets/rightArrow.svg";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 function Sentiment() {
     return (
@@ -52,60 +53,46 @@ function Sentiment() {
                     <span>%</span>
                 </div>
 
-                <div className={styles.estimatesProgressBars}>
+                <ul className={styles.progressList}>
 
-                    <div>
+                    <li className={styles.progressBarItem}>
 
-                        <p>Buy</p>
+                        <p className={styles.progressBarLabel}>Buy</p>
 
-                        <div>
-
-                            <div>
-
-
-                            </div>
-
-                            <p>76%</p>
-
+                        <div style={{ width: '100%' }}>
+                            <ProgressBar completed={60} height='8px' bgColor='#00B386' isLabelVisible={false} borderRadius='2px'/>
                         </div>
 
-                    </div>
+                        <p className={styles.progressBarPercentage}>76%</p>
 
-                    <div>
+                    </li>
 
-                        <p>Buy</p>
+                    <li className={styles.progressBarItem}>
 
-                        <div>
+                        <p className={styles.progressBarLabel}>Buy</p>
 
-                            <div>
-
-
-                            </div>
-
-                            <p>76%</p>
-
+                        <div style={{ width: '100%' }}>
+                            <ProgressBar completed={60} height='8px' bgColor='#C7C8CE' isLabelVisible={false} borderRadius='2px'/>
                         </div>
 
-                    </div>
+                        <p className={styles.progressBarPercentage}>76%</p>
 
-                    <div>
+                    </li>
 
-                        <p>Buy</p>
+                    <li className={styles.progressBarItem}>
 
-                        <div>
+                        <p className={styles.progressBarLabel}>Buy</p>
 
-                            <div>
-
-
-                            </div>
-
-                            <p>76%</p>
-
+                        <div style={{ width: '100%' }}>
+                            <ProgressBar completed={60} height='8px' bgColor='#F7324C' isLabelVisible={false} borderRadius='2px'/>
                         </div>
 
-                    </div>
+                        <p className={styles.progressBarPercentage}>76%</p>
 
-                </div>
+                    </li>
+
+                </ul>
+
 
             </div>
 

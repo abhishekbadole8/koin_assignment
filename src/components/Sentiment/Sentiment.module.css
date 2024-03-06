@@ -1,4 +1,4 @@
-.sentiment {}
+
 
 .eventsList {
     list-style: none;
@@ -6,6 +6,10 @@
     gap: 22px;
     position: relative;
     overflow-x: auto;
+}
+
+.eventsList::-webkit-scrollbar {
+    display: none;
 }
 
 .eventItem {
@@ -62,17 +66,17 @@
 
 }
 
-.moreEventsButton img {}
 
 /* estimates */
 
 .analystEstimateContainer {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 40px;
 }
 
 .analystEstimatePercentage {
-    width: 116px;
+    min-width: 116px;
     height: 116px;
     border-radius: 50%;
     display: flex;
@@ -94,10 +98,34 @@
     line-height: 22px;
 }
 
-.estimatesProgressBars {
+.progressList {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    list-style: none;
 }
+
+.progressBarItem {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* min-width: 100%; */
+    padding: 8px 0;
+}
+
+.progressBarItem p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #7C7E8C;
+}
+
+.progressBarItem p:last-child {
+    font-size: 14px;
+}
+
+
 
 /* Media query for mobile */
 @media (max-width: 768px) {
@@ -125,5 +153,9 @@
         font-weight: 400;
         font-size: 11px;
         line-height: 8px;
+    }
+
+    .analystEstimateContainer {
+        gap: 12px;
     }
 }

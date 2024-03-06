@@ -72,19 +72,18 @@ section h4 span {
 
 
 /* right container */
-.rightContainer {}
+
 
 .getStartedContainer {
     padding: 2.25rem 3rem;
     border-radius: 16px;
     text-align: center;
     background-color: #0052FE;
-    /* height: 500px; */
     min-width: 420px;
     margin-bottom: 20px;
 }
 
-.getStartedInfo {}
+
 
 .getStartedTitle {
     color: #fff;
@@ -141,6 +140,10 @@ section h4 span {
     display: flex;
     gap: 34px;
     border-bottom: 1px solid #D3E0E6;
+}
+
+.horizontalMenuList::-webkit-scrollbar {
+    display: none;
 }
 
 .horizontalMenuItems,

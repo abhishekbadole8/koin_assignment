@@ -1,10 +1,9 @@
-import React from 'react'
+
 import styles from "./Suggestion.module.css";
-import PercentageChange from '../PercentageChange/PercentageChange';
-import bitcoin from "../../assets/bitcoin.png"
 import next from "../../assets/rightArrow.svg"
 
-function Suggestion() {
+function Suggestion({ trendingCurrencyData }) {
+
     return (
         <div className={styles.suggestionContainer}>
 
@@ -16,52 +15,35 @@ function Suggestion() {
                 <div className={styles.suggestionList}>
 
                     <ul className={styles.suggestionItems}>
+                        {trendingCurrencyData?.length > 0 && trendingCurrencyData?.map((data) => {
 
-                        <li className={styles.suggestionItem}>
+                            return (
+                                <li className={styles.suggestionItem} key={data.item.coin_id}>
 
-                            <div className={styles.suggestionItemContent}>
-                                <div className={styles.suggestionItemImage}>
-                                    <img src={bitcoin} alt="" />
-                                </div>
+                                    <div className={styles.suggestionItemContent}>
+                                        <div className={styles.suggestionItemImage}>
+                                            <img src={data.item.thumb} alt="" />
+                                        </div>
 
-                                <span className={styles.suggestionItemName}>BNB</span>
-                                <div className={styles.currencyPriceChangePercentage}>
-                                    <span>
-                                        +
-                                    </span>
-                                    <p>2.51%</p>
-                                </div>
-                            </div>
+                                        <span className={styles.suggestionItemName}>{data.item.symbol}</span>
+                                        <div className={styles.currencyPriceChangePercentage}>
+                                            <span>
+                                                +
+                                            </span>
+                                            <p>{data.item.data.price_change_percentage_24h?.usd.toFixed(2)}</p>
+                                        </div>
+                                    </div>
 
-                            <p className={styles.suggestionItemPrice}>$319.34</p>
+                                    <p className={styles.suggestionItemPrice}>$319.34</p>
 
-                            <div className={styles.suggestionItemChart}>
-                                {/* chart */}
-                            </div>
-                        </li>
+                                    <div className={styles.suggestionItemChart}>
+                                        {/* chart */}
+                                    </div>
+                                </li>)
+                        })}
 
-                        <li className={styles.suggestionItem}>
 
-                            <div className={styles.suggestionItemContent}>
-                                <div className={styles.suggestionItemImage}>
-                                    <img src={bitcoin} alt="" />
-                                </div>
 
-                                <span className={styles.suggestionItemName}>BNB</span>
-                                <div className={styles.currencyPriceChangePercentage}>
-                                    <span>
-                                        +
-                                    </span>
-                                    <p>2.51%</p>
-                                </div>
-                            </div>
-
-                            <p className={styles.suggestionItemPrice}>$319.34</p>
-
-                            <div className={styles.suggestionItemChart}>
-                                {/* chart */}
-                            </div>
-                        </li>
                     </ul>
 
                     <div className={styles.suggestionButtons}>
@@ -86,28 +68,35 @@ function Suggestion() {
 
                     <ul className={styles.suggestionItems}>
 
-                        <li className={styles.suggestionItem}>
+                        {trendingCurrencyData?.length > 0 && trendingCurrencyData?.map((data) => {
 
-                            <div className={styles.suggestionItemContent}>
-                                <div className={styles.suggestionItemImage}>
-                                    <img src={bitcoin} alt="" />
-                                </div>
+                            return (
+                                <li className={styles.suggestionItem} key={data.item.coin_id}>
 
-                                <span className={styles.suggestionItemName}>BNB</span>
-                                <div className={styles.currencyPriceChangePercentage}>
-                                    <span>
-                                        +
-                                    </span>
-                                    <p>2.51%</p>
-                                </div>
-                            </div>
+                                    <div className={styles.suggestionItemContent}>
+                                        <div className={styles.suggestionItemImage}>
+                                            <img src={data.item.thumb} alt="" />
+                                        </div>
 
-                            <p className={styles.suggestionItemPrice}>$319.34</p>
+                                        <span className={styles.suggestionItemName}>{data.item.symbol}</span>
 
-                            <div className={styles.suggestionItemChart}>
-                                {/* chart */}
-                            </div>
-                        </li>
+                                        <div className={styles.currencyPriceChangePercentage}>
+                                            <span>
+                                                +
+                                            </span>
+                                            <p>{data.item.data.price_change_percentage_24h?.usd.toFixed(2)}</p>
+                                        </div>
+                                    </div>
+
+                                    <p className={styles.suggestionItemPrice}>$319.34</p>
+
+                                    <div className={styles.suggestionItemChart}>
+                                        {/* chart */}
+                                    </div>
+                                </li>)
+                        })}
+
+
 
 
                     </ul>

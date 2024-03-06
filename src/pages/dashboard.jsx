@@ -1,4 +1,4 @@
-
+import { useEffect, useState } from "react";
 import Header from "../components/Header/Header";
 import styles from "./dashboard.module.css";
 import Hero from "../components/Hero/Hero";
@@ -12,8 +12,26 @@ import About from "../components/About/About";
 import Tokenomics from "../components/Tokenomics/Tokenomics";
 import Team from "../components/Team/Team";
 import Suggestion from "../components/Suggestion/Suggestion";
+import { getTrending } from "../services/getPrice";
 
 function dashboard() {
+
+    const [trendingCurrencyData, setTrendingCurrencyData] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await getTrending()
+                const coins = response.coins
+                setTrendingCurrencyData(coins)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData()
+    }, [])
+
+
     return (
         <div className={styles.dashboard}>
             <Header />
@@ -58,7 +76,7 @@ function dashboard() {
 
                     <Tokenomics />
 
-                    <Team />
+                    <Team trendingCurrencyData={trendingCurrencyData}/>
 
                 </div>
 
@@ -231,17 +249,16 @@ function dashboard() {
                             </span>
                         </button>
 
-
                     </div>
 
-                    <Trending />
+                    <Trending trendingCurrencyData={trendingCurrencyData}/>
 
                 </div>
 
             </main>
 
             <div className={styles.suggestionResContainer}>
-                <Suggestion />
+                <Suggestion trendingCurrencyData={trendingCurrencyData}/>
             </div>
 
         </div >

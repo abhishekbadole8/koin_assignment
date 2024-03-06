@@ -1,32 +1,42 @@
 import React from 'react'
 import styles from "./Tokenomics.module.css";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 function Tokenomics() {
+    let percentage = 70
+
     return (
         <section className={styles.tokenomicsSection}>
+
             <h3>Tokenomics</h3>
 
-                <h4>Initail Distribution</h4>
+            <h4>Initail Distribution</h4>
+
             <div className={styles.initialDistribution}>
 
+                <div className={styles.circularProgress}>
 
-                
-                    <div className={styles.circularProgress}>
+                    <CircularProgressbar value={percentage} strokeWidth={15} styles={buildStyles({
+                        strokeLinecap: "butt",
+                        pathColor: "#0082FF",
+                        trailColor: "#FAA002"
+                    })} />
 
-                    </div>
+                </div>
 
-                    <div className={styles.distributionDetails}>
-                        <div className={styles.distributionItem}>
+                <div className={styles.distributionDetails}>
+                    <ul className={styles.distributionItem}>
+                        <li>
                             <span className={styles.distributionIcon}></span>
                             <p className={styles.distributionText}>Crowdsale investors: 80%</p>
-                        </div>
-                        <div className={styles.distributionItem}>
+                        </li>
+                        <li className={styles.distributionItem}>
                             <span className={styles.distributionIcon}></span>
                             <p className={styles.distributionText}>Foundation: 20%</p>
-                        </div>
-                    </div>
+                        </li> </ul>
+                </div>
 
-             
             </div>
 
             <article className={styles.tokenomicsArticle}>

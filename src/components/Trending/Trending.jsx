@@ -1,9 +1,8 @@
-import React from 'react'
 import PercentageChange from "../PercentageChange/PercentageChange";
-import bitcoin from "../../assets/bitcoin.png";
 import styles from './Trending.module.css';
 
-function Trending() {
+function Trending({ trendingCurrencyData }) {
+
     return (
         <section className={styles.trendingCoinsContainer}>
 
@@ -11,54 +10,31 @@ function Trending() {
 
             <ul className={styles.coinList}>
 
-                <li className={styles.coinItem}>
+                {trendingCurrencyData?.length > 0 && trendingCurrencyData?.map((data) => {
 
-                    <div className={styles.coinDetails}>
+                    return (
+                        <li key={data.item.coin_id} className={styles.coinItem} >
 
-                        <div className={styles.coinIcon}>
-                            <img src={bitcoin} alt="Bitcoin Icon" className={styles.coinIconImage} />
-                        </div>
+                            <div className={styles.coinDetails}>
 
-                        <h5 className={styles.coinName}>Ethereum(ETH)</h5>
-                    </div>
+                                <div className={styles.coinIcon}>
+                                    <img src={data.item.thumb} alt="Icon" className={styles.coinIconImage} />
+                                </div>
 
-                    <PercentageChange />
+                                <h5 className={styles.coinName}>
+                                    {data.item.name}({data.item.symbol})
+                                </h5>
+                            </div>
 
-                </li>
+                            <PercentageChange usd_24h_change={data.item.data.price_change_percentage_24h?.usd.toFixed(2)} />
 
-                <li className={styles.coinItem}>
+                        </li>)
 
-                    <div className={styles.coinDetails}>
-
-                        <div className={styles.coinIcon}>
-                            <img src={bitcoin} alt="Bitcoin Icon" className={styles.coinIconImage} />
-                        </div>
-
-                        <h5 className={styles.coinName}>Ethereum(ETH)</h5>
-                    </div>
-
-                    <PercentageChange />
-
-                </li>
-
-                <li className={styles.coinItem}>
-
-                    <div className={styles.coinDetails}>
-
-                        <div className={styles.coinIcon}>
-                            <img src={bitcoin} alt="Bitcoin Icon" className={styles.coinIconImage} />
-                        </div>
-
-                        <h5 className={styles.coinName}>Polygon (MATIC)</h5>
-                    </div>
-
-                    <PercentageChange />
-
-                </li>
+                })}
 
             </ul>
 
-        </section>
+        </section >
     )
 }
 

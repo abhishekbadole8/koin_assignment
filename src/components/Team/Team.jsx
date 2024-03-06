@@ -3,7 +3,8 @@ import styles from "./Team.module.css";
 import member from "../../assets/Mask Group.png";
 import Suggestion from '../Suggestion/Suggestion';
 
-function Team() {
+function Team({ trendingCurrencyData }) {
+
     return (
         <section className={styles.teamSection}>
             <h3>Team</h3>
@@ -70,7 +71,7 @@ function Team() {
             </ul>
 
             <div className={styles.suggestionResContainer}>
-                <Suggestion />
+                <Suggestion trendingCurrencyData={trendingCurrencyData} />
             </div>
 
         </section>

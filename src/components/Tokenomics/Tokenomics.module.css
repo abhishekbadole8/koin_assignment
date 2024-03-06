@@ -1,9 +1,13 @@
-.tokenomicsSection {}
-
-.tokenomicsSection {}
-
 .initialDistribution {
     margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.circularProgress {
+    width: 179px;
+    height: 179px;
 }
 
 .tokenomicsSection article {
@@ -15,10 +19,16 @@
     color: #3E424A;
 }
 
+
 .distributionItem {
+    list-style: none;
+}
+
+.distributionItem li {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
 .distributionIcon {
@@ -38,7 +48,7 @@
 
 /* Media query for mobile */
 @media (max-width: 768px) {
-    .tokenomicsSection{
+    .tokenomicsSection {
         display: none;
     }
 }

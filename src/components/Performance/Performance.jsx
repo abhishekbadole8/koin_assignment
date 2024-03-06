@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./Performance.module.css";
+import ProgressBar from '@ramonak/react-progress-bar';
 
 function Performance() {
     return (
@@ -15,7 +16,7 @@ function Performance() {
                         <span className={styles.performanceProgressValue}>46,930.22</span>
                     </div>
                     <div className={styles.column2}>
-                        <div className={styles.container}>Container with no rows</div>
+                        <ProgressBar completed={100} isLabelVisible={false} borderRadius='10px' height='4.6px' />
                     </div>
                     <div className={styles.column3}>
                         <span className={styles.performanceProgressTitle}>Today's High</span>
@@ -29,7 +30,7 @@ function Performance() {
                         <span className={styles.performanceProgressValue}>46,930.22</span>
                     </div>
                     <div className={styles.column2}>
-                        <div className={styles.container}>Container with no rows</div>
+                        <ProgressBar completed={100} isLabelVisible={false} borderRadius='10px' height='4.5px' />
                     </div>
                     <div className={styles.column3}>
                         <span className={styles.performanceProgressTitle}>Today's High</span>

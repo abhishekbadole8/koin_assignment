@@ -20,6 +20,11 @@
 
 .suggestionItems {
     overflow-x: auto;
+
+}
+
+.suggestionItems::-webkit-scrollbar {
+    display: none;
 }
 
 .suggestionItems,
@@ -185,11 +190,11 @@
     .suggestionPreviousButton {
         margin-left: -.65rem;
     }
-    
+
     .suggestionNextButton {
         margin-right: -.65rem;
     }
-    
+
     /* percent */
     .currencyPriceChangePercentage {
         font-size: 10px;
