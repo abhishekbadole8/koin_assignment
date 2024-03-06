@@ -1,6 +1,10 @@
 .heroSection {
-    width: 960px;
+    width: 990px;
     height: 700px;
+}
+
+.heroHeaderInContainer {
+    display: block;
 }
 
 /* --------- hero header ----------- */
@@ -91,4 +95,26 @@
 .heroChartContainer {
     margin-top: 20px;
     border-top: 1px solid #DEE1E6;
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        width: 100%;
+    }
+
+    .heroHeader {
+        background-color: rgba(239, 242, 245, 1);
+    }
+
+    .heroHeaderInContainer {
+        display: none;
+    }
+
+    .heroCurrencyPrice {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .currencyPriceValue{
+
+    }
 }

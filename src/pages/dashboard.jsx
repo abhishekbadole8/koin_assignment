@@ -6,6 +6,9 @@ import PercentageChange from "../components/PercentageChange/PercentageChange";
 import bitcoin from "../assets/bitcoin.png";
 import Performance from "../components/Performance/Performance";
 import Trending from "../components/Trending/Trending";
+import Sentiment from "../components/Sentiment/Sentiment";
+import HeroHeader from "../components/HeroHeader.jsx/HeroHeader";
+import About from "../components/About/About";
 
 function dashboard() {
     return (
@@ -17,6 +20,10 @@ function dashboard() {
                 <span>&gt;&gt;</span>
                 <span className="">Bitcoin</span>
             </p>
+
+            <div className={styles.heroHeaderResContainer}>
+                <HeroHeader />
+            </div>
 
             <main>
 
@@ -41,6 +48,10 @@ function dashboard() {
                     </div>
 
                     <Performance />
+
+                    <Sentiment />
+
+                    <About />
 
                 </div>
 

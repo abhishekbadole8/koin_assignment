@@ -1,0 +1,70 @@
+.heroHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    font-family: 'Inter';
+}
+
+.currencyIcon {
+    width: 36px;
+    height: 36px;
+}
+
+.currencyIcon img {
+    width: 100%;
+}
+
+.currencyTitle {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #0b1426;
+    margin: 0 10px;
+}
+
+.currencySymbol {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 19px;
+    color: #5D667B;
+}
+
+.rankTag {
+    border-radius: 8px;
+    background-color: #808A9D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-left: 20px;
+    padding: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+@media (max-width: 768px) {
+    .heroHeader {
+        background-color: rgba(239, 242, 245, 1);
+        padding: 0 1rem 20px;
+        margin-bottom: 0;
+    }
+
+    .currencyIcon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .currencyTitle {
+        font-size: 21px;
+    }
+
+    .currencySymbol {
+        font-size: 14px;
+    }
+
+    .rankTag {
+        padding: 6px 8px;
+        font-size: 15px;
+        border-radius: 4px;
+    }
+}

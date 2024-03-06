@@ -19,6 +19,10 @@
     color: rgba(15, 22, 41, 1);
 }
 
+.heroHeaderResContainer {
+    display: none;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -36,7 +40,7 @@ section {
     margin-bottom: 20px;
 }
 
-.sectionTitle {
+section h3 {
     color: #0F1629;
     font-weight: 600;
     font-size: 22px;
@@ -44,13 +48,28 @@ section {
     margin-bottom: 16px;
 }
 
-.sectionSubTitle {
+section h4 {
     color: #44475B;
     font-weight: 600;
     font-size: 18px;
     line-height: 20px;
-    margin: 12px 0;
+    margin: 10px 0 16px;
+    display: flex;
+    gap: 6px;
+    text-align: center;
+    align-items: center;
 }
+
+section h4 span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #7C7E8C;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+
 
 /* right container */
 .rightContainer {}
@@ -60,7 +79,8 @@ section {
     border-radius: 16px;
     text-align: center;
     background-color: #0052FE;
-    height: 500px;
+    /* height: 500px; */
+    min-width: 420px;
     margin-bottom: 20px;
 }
 
@@ -126,6 +146,7 @@ section {
 .horizontalMenuItems,
 .horizontalMenuItemsActive {
     padding: 14px 0;
+
 }
 
 .horizontalMenuItemsActive,
@@ -142,7 +163,57 @@ section {
 
 /* Media query for mobile */
 @media (max-width: 768px) {
+    .routeTracker {
+        padding: .75rem 1rem;
+    }
+
+    .heroHeaderResContainer {
+        display: block;
+    }
+
     main {
+        width: 100%;
+        padding: 0 15px;
         flex-direction: column;
     }
+
+    section {
+        padding: 18px 12px;
+    }
+
+    section h4 {
+        font-size: 17px
+    }
+
+    .horizontalMenuContainer {
+        overflow-x: auto;
+    }
+
+    .horizontalMenuList {
+        gap: 28px;
+        white-space: nowrap;
+    }
+
+    .getStartedContainer {
+        min-width: 100%;
+        padding: 26px 22px;
+    }
+
+    .getStartedTitle {
+        font-size: 22px;
+    }
+
+    .getStartedDescription {
+        font-size: 14px;
+    }
+
+    .placeholder {
+        margin: 18px;
+    }
+
+    .placeholder svg {
+        width: 139px;
+        height: 149px;
+    }
+
 }

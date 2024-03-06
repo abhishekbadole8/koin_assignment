@@ -1,0 +1,129 @@
+.sentiment {}
+
+.eventsList {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    position: relative;
+    overflow-x: auto;
+}
+
+.eventItem {
+    min-width: 435px;
+    padding: 18px 18px 38px 18px;
+    border-radius: 12px;
+    display: flex;
+    gap: 8px;
+    background-color: #E8F4FD;
+}
+
+.eventIcon {
+    padding: 7px;
+    width: 44px;
+    height: 44px;
+    background-color: #0082FF;
+    border-radius: 50%;
+}
+
+.eventIcon img {
+    width: 100%;
+    height: auto;
+}
+
+.eventContent {
+    width: 100%;
+}
+
+.eventHeader {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #191C1f;
+    margin-bottom: 8px;
+}
+
+.eventFooter {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3E5765;
+}
+
+
+.moreEventsButton {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background-color: grey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.moreEventsButton img {}
+
+/* estimates */
+
+.analystEstimateContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.analystEstimatePercentage {
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBF9F4;
+    color: #0FBA83;
+    font-weight: 500;
+    gap: 2px;
+}
+
+.analystEstimatePercentage p {
+    font-size: 34px;
+    line-height: 44px;
+}
+
+.analystEstimatePercentage span {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.estimatesProgressBars {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .eventsList {
+        gap: 9.8px;
+    }
+
+    .eventItem {
+        min-width: 320px;
+        padding: 12px 10px 28px 10px;
+    }
+
+    .eventIcon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .eventHeader {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .eventFooter {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 8px;
+    }
+}

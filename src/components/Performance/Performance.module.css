@@ -70,3 +70,15 @@
     color: #111827;
     font-size: 13px;
 }
+
+@media (max-width: 768px) {
+
+    .column1,
+    .column2,
+    .column3 {
+        padding: 0;
+    }
+    .fundamentalItem{
+        height: 46px;
+    }
+}
