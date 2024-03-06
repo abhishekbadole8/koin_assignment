@@ -17,15 +17,16 @@ function Suggestion({ trendingCurrencyData }) {
                     <ul className={styles.suggestionItems}>
                         {trendingCurrencyData?.length > 0 && trendingCurrencyData?.map((data) => {
 
-                            return (
-                                <li className={styles.suggestionItem} key={data.item.coin_id}>
+                            const { coin_id, thumb, symbol, } = data.item
 
+                            return (
+                                <li className={styles.suggestionItem} key={coin_id}>
                                     <div className={styles.suggestionItemContent}>
                                         <div className={styles.suggestionItemImage}>
-                                            <img src={data.item.thumb} alt="" />
+                                            <img src={thumb} alt="icon" />
                                         </div>
 
-                                        <span className={styles.suggestionItemName}>{data.item.symbol}</span>
+                                        <span className={styles.suggestionItemName}>{symbol}</span>
                                         <div className={styles.currencyPriceChangePercentage}>
                                             <span>
                                                 +
@@ -37,12 +38,10 @@ function Suggestion({ trendingCurrencyData }) {
                                     <p className={styles.suggestionItemPrice}>$319.34</p>
 
                                     <div className={styles.suggestionItemChart}>
-                                        {/* chart */}
+                                        <img src={data.item.data.sparkline} alt="chart-img" />
                                     </div>
                                 </li>)
                         })}
-
-
 
                     </ul>
 
@@ -91,13 +90,10 @@ function Suggestion({ trendingCurrencyData }) {
                                     <p className={styles.suggestionItemPrice}>$319.34</p>
 
                                     <div className={styles.suggestionItemChart}>
-                                        {/* chart */}
+                                        <img src={data.item.data.sparkline} alt="chart-img" />
                                     </div>
                                 </li>)
                         })}
-
-
-
 
                     </ul>
 

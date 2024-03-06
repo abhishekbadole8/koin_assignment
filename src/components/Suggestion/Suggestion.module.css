@@ -41,7 +41,7 @@
     border-radius: 10px;
     padding: 16px;
     border: 1px solid #E3E3E3;
-    /* margin-right: 10px; */
+    cursor: pointer;
 }
 
 .suggestionItemImage {
@@ -133,6 +133,15 @@
     line-height: 19px;
 }
 
+.suggestionItemChart {
+    padding-left: 28px;
+
+}
+
+.suggestionItemChart img {
+    width: 100%;
+}
+
 /* --------------- */
 /* Media query for mobile */
 @media (max-width: 768px) {
@@ -184,7 +193,7 @@
     }
 
     .suggestionItemPrice {
-        margin-top: 5px;
+        margin: 6px 0;
     }
 
     .suggestionPreviousButton {
@@ -210,5 +219,10 @@
         font-weight: 400;
         line-height: 9px;
         letter-spacing: 0em;
+    }
+
+    .suggestionItemChart {
+        width: 110px;
+        padding-left: 1rem;
     }
 }
